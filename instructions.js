@@ -18,7 +18,7 @@ function drawInstr() {
   fill(0);
   textAlign(CENTER, TOP);
   textSize(36);
-  text("Instructions", width / 2, 80);
+  text("Instruction for the Story", width / 2, 80);
 
   // ---- Instruction text ----
   textSize(18);
@@ -26,40 +26,41 @@ function drawInstr() {
   // \n creates a line break in the text
   // This is useful for simple multi-line instructions
   const lines =
-    "Press the game button.\n" + "You have a chance to win or lose!";
+    "Make your choice\n" +
+    "You'll get into two different endings later! \n Press B back to the start page";
 
   text(lines, width / 2, 160);
-
-  // ---- Back button ----
-  // This button lets the player return to the start screen
-  const backBtn = {
-    x: width / 2, // centred horizontally
-    y: 560,
-    w: 220,
-    h: 70,
-    label: "BACK",
-  };
-
-  // Draw the back button
-  drawInstrButton(backBtn);
-
-  // Change cursor when hovering over the button
-  cursor(isHover(backBtn) ? HAND : ARROW);
 }
 
 // ------------------------------
 // Mouse input for instructions screen
 // ------------------------------
 // Called from main.js only when currentScreen === "instr"
-function instrMousePressed() {
-  // Button data must match the draw position
-  const backBtn = { x: width / 2, y: 560, w: 220, h: 70 };
+// function instrMousePressed() {
+//   // Button data must match the draw position
+//   const opt1 = {
+//     x: width / 4, // centred horizontally
+//     y: 560,
+//     w: 220,
+//     h: 70,
+//     label: "Star",
+//   };
 
-  // If the button is clicked, return to the start screen
-  if (isHover(backBtn)) {
-    currentScreen = "start";
-  }
-}
+//   const opt2 = {
+//     x: (width / 4) * 3, // centred horizontally
+//     y: 560,
+//     w: 220,
+//     h: 70,
+//     label: "Forest path",
+//   };
+
+//   // If the button is clicked, go to the star option
+//   if (isHover(opt1)) {
+//     currentScreen = "star";
+//   } else if (isHover(opt2)) {
+//     currentScreen = "forest";
+//   }
+// }
 
 // ------------------------------
 // Keyboard input for instructions screen

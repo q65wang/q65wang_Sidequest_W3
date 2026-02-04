@@ -11,18 +11,22 @@
 // only when currentScreen === "lose"
 function drawLose() {
   // Red-tinted background to communicate failure
-  background(255, 210, 210);
+  background(166, 183, 239);
 
   fill(0);
   textAlign(CENTER, CENTER);
 
   // Main message
   textSize(40);
-  text("You Lose!", width / 2, 300);
+  text("Ending B", width / 2, 300);
 
   // Instruction text
   textSize(20);
-  text("Click or press R to return to Start.", width / 2, 360);
+  text(
+    "You keep the star close. \n Magic settles around you, heavy and quiet. \n The sky loses a light that night. \n Fairy tales remember this choice.",
+    width / 2,
+    400,
+  );
 }
 
 // ------------------------------

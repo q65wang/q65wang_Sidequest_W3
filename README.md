@@ -1,6 +1,12 @@
 ## Project Title
 
-GBDA302 Week 3 Example 1: Instructions Screen with Back button
+GBDA302 Week 3 Side Quest
+
+## Name
+
+Yolanda Wang
+q65wang
+21076725
 
 ---
 
@@ -36,4 +42,8 @@ N/A
 
 The code was written by Dr. Karen Cochrane but she used GenAI to write the comments.
 
----
+Use AI (ChatGPT) for writing the story and options text only
+
+AI prompt: "Can u write a multi-ending short story with 3 different switch choices in between, which lead to 2 different endings. Write the story genre as fairy tale and in a first person perspective. Give a short background as the start page, each page about 3-4 lines"
+
+## Feedback: The story lines for each page

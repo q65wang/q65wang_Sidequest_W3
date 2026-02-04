@@ -50,6 +50,9 @@ function draw() {
 
   if (currentScreen === "start") drawStart();
   else if (currentScreen === "instr") drawInstr();
+  else if (currentScreen === "initialpage") drawInitPage();
+  else if (currentScreen === "star") drawStar();
+  else if (currentScreen === "forest") drawForest();
   else if (currentScreen === "game") drawGame();
   else if (currentScreen === "win") drawWin();
   else if (currentScreen === "lose") drawLose();
@@ -76,6 +79,9 @@ function mousePressed() {
   if (currentScreen === "start") startMousePressed();
   else if (currentScreen === "instr") instrMousePressed();
   else if (currentScreen === "game") gameMousePressed();
+  else if (currentScreen === "star") starMousePressed();
+  else if (currentScreen === "forest") forestMousePressed();
+  else if (currentScreen === "initialpage") initPageMousePressed();
   // The ?.() means “call this function only if it exists”
   // This prevents errors if a screen doesn’t implement a handler.
   else if (currentScreen === "win") winMousePressed?.();
@@ -97,6 +103,9 @@ function keyPressed() {
   if (currentScreen === "start") startKeyPressed();
   else if (currentScreen === "instr") instrKeyPressed();
   else if (currentScreen === "game") gameKeyPressed?.();
+  else if (currentScreen === "star") starKeyPressed?.();
+  else if (currentScreen === "forest") forestKeyPressed?.();
+  else if (currentScreen === "initialpage") initPageKeyPressed?.();
   else if (currentScreen === "win") winKeyPressed?.();
   else if (currentScreen === "lose") loseKeyPressed?.();
 }

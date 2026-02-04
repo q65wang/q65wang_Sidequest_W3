@@ -12,21 +12,26 @@
 // currentScreen === "start"
 function drawStart() {
   // Background colour for the start screen
-  background(180, 225, 220); // soft teal background
+  background(63, 76, 156); // dark blue background
 
   // ---- Title text ----
-  fill(30, 50, 60);
+  fill(255, 255, 255);
   textSize(46);
   textAlign(CENTER, CENTER);
-  text("Win or Lose", width / 2, 180);
-
+  text("Fairy Tale Stimulator", width / 2, 180);
+  textSize(24);
+  text(
+    "You grew up in a village where fairy tales never ended. \n They simply wandered into the woods. \n When a star fell one night, \n you followed it without telling anyone.",
+    width / 2,
+    300,
+  );
   // ---- Buttons (data only) ----
   // These objects store the position/size/label for each button.
   // Using objects makes it easy to pass them into drawButton()
   // and also reuse the same information for hover checks.
   const startBtn = {
     x: width / 2,
-    y: 320,
+    y: 450,
     w: 240,
     h: 80,
     label: "START",
@@ -34,7 +39,7 @@ function drawStart() {
 
   const instrBtn = {
     x: width / 2,
-    y: 430,
+    y: 550,
     w: 240,
     h: 80,
     label: "INSTRUCTIONS",
@@ -57,12 +62,25 @@ function drawStart() {
 // Called from main.js only when currentScreen === "start"
 function startMousePressed() {
   // For input checks, we only need x,y,w,h (label is optional)
-  const startBtn = { x: width / 2, y: 320, w: 240, h: 80 };
-  const instrBtn = { x: width / 2, y: 430, w: 240, h: 80 };
+  const startBtn = {
+    x: width / 2,
+    y: 450,
+    w: 240,
+    h: 80,
+    label: "START",
+  };
+
+  const instrBtn = {
+    x: width / 2,
+    y: 550,
+    w: 240,
+    h: 80,
+    label: "INSTRUCTIONS",
+  };
 
   // If START is clicked, go to the game screen
   if (isHover(startBtn)) {
-    currentScreen = "game";
+    currentScreen = "initialpage";
   }
   // If INSTRUCTIONS is clicked, go to the instructions screen
   else if (isHover(instrBtn)) {
@@ -78,7 +96,7 @@ function startMousePressed() {
 // - I opens instructions
 function startKeyPressed() {
   if (keyCode === ENTER) {
-    currentScreen = "game";
+    currentScreen = "initialpage";
   }
 
   if (key === "i" || key === "I") {
